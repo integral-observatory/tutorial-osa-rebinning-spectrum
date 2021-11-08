@@ -45,6 +45,8 @@ rm -rfv obs/test-bins
 export COMMONLOGFILE=+$PWD/commonlog.txt
 export COMMONSCRIPT=1
 
+# Standard OSA
+
 og_create \
     idxSwg=scws.txt \
     instrument=ibis \
@@ -58,5 +60,7 @@ og_create \
         endLevel=SPE \
         IBIS_SI_inEnergyValues=$new_rmf_fn[ISGR-EBDS-MOD]
 )
+
+# Inspect the spectrum  and make sure it has the desired number of bins
 
 fstruct obs/test-bins/scw/$scw/isgri_spectrum.fits[2]
